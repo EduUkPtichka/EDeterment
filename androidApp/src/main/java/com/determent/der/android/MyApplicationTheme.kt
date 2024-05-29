@@ -1,4 +1,4 @@
-package com.determent.edeterment.android
+package com.determent.der.android
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

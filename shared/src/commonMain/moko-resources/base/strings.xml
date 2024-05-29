@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+    <string name="auth_reg">Регистрация</string>
+    <string name="auth_emailPerson">Почта</string>
+    <string name="auth_phoneNumber">Телефон</string>
+    <string name="auth_txt_email">email</string>
+    <string name="auth_txt_phone_number">Номер телефона</string>
+    <string name="auth_txt_helper">Войти с помощью</string>
+    <string name="auth_bt_enter">Войти</string>
+
+</resources>

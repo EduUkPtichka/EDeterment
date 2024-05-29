@@ -2,13 +2,6 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
     repositories {
-        google {
-            mavenContent {
-                includeGroupAndSubgroups("androidx")
-                includeGroupAndSubgroups("com.android")
-                includeGroupAndSubgroups("com.google")
-            }
-        }
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -17,18 +10,14 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
-        google {
-            mavenContent {
-                includeGroupAndSubgroups("androidx")
-                includeGroupAndSubgroups("com.android")
-                includeGroupAndSubgroups("com.google")
-            }
-        }
         mavenCentral()
+        google()
         gradlePluginPortal()
     }
 }
 
 rootProject.name = "EDeterment"
+
+//include(":common-moko-resource")
 include(":androidApp")
 include(":shared")

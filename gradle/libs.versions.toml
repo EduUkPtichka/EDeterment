@@ -42,7 +42,7 @@ essentyV = "2.0.0"
 kodein-diV = "7.21.2"
 
 # Moko
-moko-resourcesV = "0.24.0-beta-3"
+moko-resourcesV = "0.24.0-beta-5"
 moko-graphicsV = "0.9.0"
 
 # Touchlab

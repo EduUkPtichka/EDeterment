@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlinPluginSerialization)
     alias(libs.plugins.touchlab.skiePlugin)
 
-    //alias(libs.plugins.icerock.mokoMobileMultiplatformResources)
+    alias(libs.plugins.icerock.mokoMobileMultiplatformResources)
 }
 
 kotlin {
@@ -16,6 +16,7 @@ kotlin {
         compilations.all {
             kotlinOptions {
                 jvmTarget = "17"
+
             }
         }
     }
@@ -38,9 +39,12 @@ kotlin {
             export("com.arkivanov.essenty:lifecycle:2.0.0")
             export("com.arkivanov.essenty:state-keeper:2.0.0")
 
-//            export(libs.arkivanov.decompose)
-//            export(libs.arkivanov.essenty.lifecycle)
-//            export(libs.arkivanov.essenty.stateKeeper)
+            export(libs.moko.resources)
+            export(libs.moko.graphics)
+
+//          export(libs.arkivanov.decompose)
+//          export(libs.arkivanov.essenty.lifecycle)
+//          export(libs.arkivanov.essenty.stateKeeper)
         }
     }
 
@@ -68,10 +72,17 @@ dependencies {
 
     commonMainImplementation(libs.kodein.di)
 
+    // Moko
+    commonMainApi(libs.moko.resources)
+    commonMainApi(libs.moko.resourcesCompose)
+
+    /* ----------------- Android ----------------- */
+
+    "androidMainImplementation"(libs.android.composeUiToolingPreview)
 }
 
 android {
-    namespace = "com.determent.edeterment"
+    namespace = "determent.der.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -95,4 +106,8 @@ android {
         debugImplementation(libs.android.composeUiTooling)
     }
 
+}
+
+multiplatformResources {
+    resourcesPackage.set("org.example.library")
 }

@@ -9,12 +9,12 @@ plugins {
     alias(libs.plugins.jetbrains.kotlinCocoapods).apply(false)
     alias(libs.plugins.jetbrains.kotlinPluginSerialization).apply(false)
 
-    //alias(libs.plugins.icerock.mokoMobileMultiplatformResources).apply(false)
+    alias(libs.plugins.icerock.mokoMobileMultiplatformResources).apply(false)
     alias(libs.plugins.touchlab.skiePlugin).apply(false)
 }
 
-//buildscript {
-//    dependencies {
-//        classpath(libs.moko.resourcesGenerator)
-//    }
-//}
+buildscript {
+    dependencies {
+        classpath(libs.moko.resourcesGenerator)
+    }
+}
