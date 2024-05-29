@@ -1,4 +1,4 @@
-package com.determent.der.reg.ui_cmp.auth_textfield
+package com.determent.der.reg.ui_cmp.reg_textfield
 
 import androidx.compose.runtime.Composable
 

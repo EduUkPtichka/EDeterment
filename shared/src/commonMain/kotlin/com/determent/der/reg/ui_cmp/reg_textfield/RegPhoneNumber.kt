@@ -1,7 +1,8 @@
-package com.determent.der.reg.ui_cmp.auth_textfield
+package com.determent.der.reg.ui_cmp.reg_textfield
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
@@ -22,13 +23,15 @@ import org.example.library.MR
 @Composable
 fun RegPhoneNumber(
     onChange: (String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
 
     OutlinedTextField(
-        value = stringResource(MR.strings.auth_txt_email),
+        value = stringResource(MR.strings.auth_txt_phone_number),
         onValueChange = { onChange(it) },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone),
-        modifier = Modifier
+
+        modifier = modifier
             .clip(RoundedCornerShape(roundedDp22))
             .border(2.dp, colorResource(MR.colors.gray_1), RoundedCornerShape(roundedDp22))
             .background(colorResource(MR.colors.white)),
@@ -45,7 +48,8 @@ private fun PhoneNumberLeadingIcon() {
         painter = painterResource(MR.images.png_flag_kyrgyzstan),
         contentDescription = null,
         modifier = Modifier
-            .size(30.dp),
+            .padding(start = 4.dp,)
+            .size(34.dp),
         tint = Color.Unspecified,
     )
 }

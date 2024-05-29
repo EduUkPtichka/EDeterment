@@ -3,7 +3,7 @@ import shared
 
 struct AuthPhoneNumber: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        return AuthPreviewIosPhoneNumber()
+        return RegPreviewIosPhoneNumber()
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
