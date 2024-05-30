@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
+
 plugins {
     alias(libs.plugins.androidLibrary)
     //alias(libs.plugins.google.ksp)
@@ -6,7 +8,7 @@ plugins {
     alias(libs.plugins.jetbrains.composeMultiplatform)
     alias(libs.plugins.jetbrains.kotlinCocoapods)
     alias(libs.plugins.jetbrains.kotlinPluginSerialization)
-    alias(libs.plugins.touchlab.skiePlugin)
+    //alias(libs.plugins.touchlab.skiePlugin)
 
     alias(libs.plugins.icerock.mokoMobileMultiplatformResources)
 }
@@ -45,6 +47,10 @@ kotlin {
 //          export(libs.arkivanov.decompose)
 //          export(libs.arkivanov.essenty.lifecycle)
 //          export(libs.arkivanov.essenty.stateKeeper)
+
+            xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
+            xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
+
         }
     }
 

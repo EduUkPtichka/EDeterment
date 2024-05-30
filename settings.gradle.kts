@@ -18,6 +18,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "EDeterment"
 
-//include(":common-moko-resource")
 include(":androidApp")
 include(":shared")

@@ -10,7 +10,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlinPluginSerialization).apply(false)
 
     alias(libs.plugins.icerock.mokoMobileMultiplatformResources).apply(false)
-    alias(libs.plugins.touchlab.skiePlugin).apply(false)
+    //alias(libs.plugins.touchlab.skiePlugin).apply(false)
 }
 
 buildscript {
