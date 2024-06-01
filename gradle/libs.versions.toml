@@ -32,11 +32,15 @@ kotlinxCollectionsImmutable = "0.3.7"
 kotlinxCoroutinesCore = "1.8.1"
 
 # Jetbrains Ktor-Client
-ktor-client =  "2.3.11"
+ktor-client = "2.3.11"
 
 # Decompose
 decomposeV = "3.0.0"
 essentyV = "2.0.0"
+
+# MVI
+mvikotlinV = "4.0.0"
+mvikotlin-extensionsCoroutines = "1.8.0"
 
 # Kodein DI
 kodein-diV = "7.21.2"
@@ -86,12 +90,17 @@ ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "kto
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decomposeV" }
 arkivanov-decompose-extensionsCompose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decomposeV" }
 # arkivanov-decompose-extensionsAndroid = { module = "com.arkivanov.decompose:extensions-android", version.ref = "decomposeV" }
-# arkivanov-essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essentyV" }
-# arkivanov-essenty-stateKeeper = { module = "com.arkivanov.essenty:state-keeper", version.ref = "essentyV" }
-# arkivanov-parcelize-darwinRuntime = { module = "com.arkivanov.parcelize.darwin:runtime", version.ref = "decomposeV"}
+arkivanov-essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essentyV" }
+arkivanov-essenty-stateKeeper = { module = "com.arkivanov.essenty:state-keeper", version.ref = "essentyV" }
+
+arkivanov-mvikotlin = { module = "com.arkivanov.mvikotlin:mvikotlin", version.ref = "mvikotlinV" }
+arkivanov-mvikotlinMain = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.ref = "mvikotlinV" }
+arkivanov-mvikotlinExtensionsCoroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlin-extensionsCoroutines" }
+arkivanov-mvikotlinLogger = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvikotlinV" }
+arkivanov-mvikotlinTimetravel = { module = "com.arkivanov.mvikotlin:mvikotlin-timetravel", version.ref = "mvikotlinV" }
 
 # Kodein
-kodein-di = { module = "org.kodein.di:kodein-di", version.ref = "kodein-diV"}
+kodein-di = { module = "org.kodein.di:kodein-di", version.ref = "kodein-diV" }
 
 # Touchlab
 touchlab-skie-configurationAnnotations = { module = "co.touchlab.skie:configuration-annotations", version.ref = "touchlab-skieV" }

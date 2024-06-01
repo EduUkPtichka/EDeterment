@@ -7,6 +7,9 @@ interface RegMainComponent {
     val models: Value<ModelRegMain>
 
     fun onChangedEmailPerson(emailPerson: String)
+
     fun onChangedPhoneNumber(phoneNumber: String)
+
+    fun onClickReg()
 
 }

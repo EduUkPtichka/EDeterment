@@ -1,8 +1,17 @@
-package com.determent.der.reg_core.ui_cmp.reg_textfield
+package com.determent.der.reg.reg_main.ui_cmp.reg_textfield
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun RegStrategyTextField() {
+internal fun RegTextFieldStrategy(
+    component1: @Composable () -> Unit,
+    component2: @Composable () -> Unit,
+    selectedIndex: Int,
+) {
+    if (selectedIndex == 0) {
+        component1()
+    } else {
+        component2()
+    }
 
 }

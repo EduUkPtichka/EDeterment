@@ -70,8 +70,7 @@ actual fun ScreenRegMain(
                 .fillMaxWidth()
         )
 
-
-
+        // Composable Component
         RegSwitchButton(
             items = items,
             selectedIndex = selectedIndex,
@@ -95,6 +94,18 @@ actual fun ScreenRegMain(
                 .height(58.dp)
                 .fillMaxWidth()
                 .padding(horizontal = horizontalPaddingDp32)
+        )
+
+        Spacer(
+            modifier = Modifier
+                .height(14.dp)
+                .fillMaxWidth(),
+        )
+
+        RegButton(
+            modifier = Modifier
+                .padding(horizontal = horizontalPaddingDp32),
+            onClick = component::onClickReg,
         )
     }
 

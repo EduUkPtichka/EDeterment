@@ -99,5 +99,17 @@ actual fun ScreenRegMain(
                 .fillMaxWidth()
                 .padding(horizontal = horizontalPaddingDp32)
         )
+
+        Spacer(
+            modifier = Modifier
+                .height(16.dp)
+                .fillMaxWidth()
+        )
+
+        RegButton(
+            modifier = Modifier
+                .padding(horizontal = horizontalPaddingDp32),
+            onClick = component::onClickReg,
+        )
     }
 }

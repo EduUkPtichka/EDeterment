@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.determent.der.reg.reg_main.ui_cmp.stateManager.roundedDp22
+import com.determent.der.reg.reg_main.ui_cmp.stateManager.roundedDp18
 import dev.icerock.moko.resources.compose.colorResource
 import org.example.library.MR
 
@@ -30,8 +30,8 @@ fun RegSwitchButton(
 
     Row(
         modifier = modifier
-            .clip(RoundedCornerShape(roundedDp22))
-            .border(2.dp, colorResource(MR.colors.gray_1), RoundedCornerShape(roundedDp22))
+            .clip(RoundedCornerShape(roundedDp18))
+            .border(1.dp, colorResource(MR.colors.gray_1), RoundedCornerShape(roundedDp18))
             .height(60.dp)
             .fillMaxWidth()
             .background(colorResource(MR.colors.white)),
@@ -46,14 +46,15 @@ fun RegSwitchButton(
             TextButton(
                 onClick = { onClick(index) },
                 modifier = Modifier
-                    .padding(4.dp)
-                    .clip(RoundedCornerShape(22.dp))
+                    .padding(2.dp)
+                    .clip(RoundedCornerShape(roundedDp18))
                     .fillMaxHeight()
                     .weight(1f)
                     .then(
                         if (isSelected) Modifier.background(colorResource(MR.colors.gray_1))
                         else Modifier.background(colorResource(MR.colors.white))
                     ),
+                shape = RoundedCornerShape(roundedDp18),
                 enabled = !isSelected
             ) {
                 Text(

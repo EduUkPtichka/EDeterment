@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
-
 plugins {
     alias(libs.plugins.androidLibrary)
     //alias(libs.plugins.google.ksp)
@@ -8,7 +6,7 @@ plugins {
     alias(libs.plugins.jetbrains.composeMultiplatform)
     alias(libs.plugins.jetbrains.kotlinCocoapods)
     alias(libs.plugins.jetbrains.kotlinPluginSerialization)
-    //alias(libs.plugins.touchlab.skiePlugin)
+    alias(libs.plugins.touchlab.skiePlugin)
 
     alias(libs.plugins.icerock.mokoMobileMultiplatformResources)
 }
@@ -37,19 +35,16 @@ kotlin {
             baseName = "shared"
             //isStatic = true
 
-            export("com.arkivanov.decompose:decompose:3.0.0")
-            export("com.arkivanov.essenty:lifecycle:2.0.0")
-            export("com.arkivanov.essenty:state-keeper:2.0.0")
+            export(libs.arkivanov.decompose)
+            export(libs.arkivanov.essenty.lifecycle)
+            export(libs.arkivanov.essenty.stateKeeper)
 
             export(libs.moko.resources)
             export(libs.moko.graphics)
 
-//          export(libs.arkivanov.decompose)
-//          export(libs.arkivanov.essenty.lifecycle)
-//          export(libs.arkivanov.essenty.stateKeeper)
 
-            xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
-            xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
+            //xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
+            //xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
 
         }
     }
@@ -75,6 +70,13 @@ dependencies {
     // Decompose
     commonMainApi(libs.arkivanov.decompose)
     commonMainApi(libs.arkivanov.decompose.extensionsCompose)
+
+    // MVI
+    commonMainApi(libs.arkivanov.mvikotlin)
+    commonMainApi(libs.arkivanov.mvikotlinMain)
+    commonMainApi(libs.arkivanov.mvikotlinExtensionsCoroutines)
+    commonMainApi(libs.arkivanov.mvikotlinLogger)
+    commonMainApi(libs.arkivanov.mvikotlinTimetravel)
 
     commonMainImplementation(libs.kodein.di)
 

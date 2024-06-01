@@ -22,4 +22,8 @@ class DefaultRegMainComponent(
         _models.value = models.value.copy(phoneNumber = phoneNumber)
     }
 
+    override fun onClickReg() {
+
+    }
+
 }
