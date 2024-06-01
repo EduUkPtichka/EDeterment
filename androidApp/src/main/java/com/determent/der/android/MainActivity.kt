@@ -16,6 +16,7 @@ import com.determent.der.home.primary_slide_banner.ui_cmp.background_content.Pri
 import dev.icerock.moko.resources.compose.colorResource
 import dev.icerock.moko.resources.compose.painterResource
 import org.example.library.MR
+import preview.primary_slide_banner.PreviewBonus_BackgroundPNG
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,9 +35,7 @@ class MainActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                PrimaryBackgroundContentPNG(imagePng = painterResource(MR.images.png_mountains)) {
-
-                }
+                PreviewBonus_BackgroundPNG()
             }
 
             //ScreenRootContent(component = root, modifier = Modifier.fillMaxSize())

@@ -60,6 +60,9 @@ dependencies {
     commonMainImplementation(libs.jetbrains.composeMaterial)
     commonMainImplementation(libs.jetbrains.composeUi)
 
+    // Compose Lib
+    commonMainImplementation(libs.chrisbanes.hazeJetpackCompose)
+
     // Jetbrains
     commonMainImplementation(libs.jetbrains.kotlinxCollectionsImmutable)
     commonMainImplementation(libs.jetbrains.kotlinx.serialization.json)
